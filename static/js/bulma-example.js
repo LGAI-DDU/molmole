@@ -26,8 +26,8 @@ function setInitialContent(section, folder) {
 function updateSmallImages(section, folder) {
   const smallImages = {
     'cp1': [
-      { src: 'static/data/CA3026592A1_reaction_sample2 1/p1/molecule0_zoom_image.png', bbox: [1599, 1164, 419, 339], smiles: 'SMILES', molfile: 'Molfile' },
-      { src: 'static/data/CA3026592A1_reaction_sample2 1/p1/molecule1_zoom_image.png', bbox: [1315, 1559, 464, 295], smiles: 'SMILES', molfile: 'Molfile' }
+      { src: 'static/data/CA3026592A1_reaction_sample2 1/p1/molecule0_input.png', bbox: [1599, 1164, 419, 339], smiles: 'SMILES', molfile: 'Molfile' },
+      { src: 'static/data/CA3026592A1_reaction_sample2 1/p1/molecule1_input.png', bbox: [1315, 1559, 464, 295], smiles: 'SMILES', molfile: 'Molfile' }
     ],
     'jp3': [
       { src: 'static/data/journal_demo/p3/molecule0_zoom_image.png', bbox: [1411, 294, 410, 190], smiles: 'SMILES', molfile: 'Molfile' },
@@ -38,8 +38,8 @@ function updateSmallImages(section, folder) {
       { src: 'static/data/patent_demo 1/p2/molecule1_zoom_image.png', bbox: [1168, 1206, 680, 377], smiles: 'SMILES', molfile: 'Molfile' }
     ],
     'wp2': [
-      { src: 'static/data/WO2005011681A1_removed 2/p2/molecule0_zoom_image.png', bbox: [1314, 990, 433, 377], smiles: 'SMILES', molfile: 'Molfile' },
-      { src: 'static/data/WO2005011681A1_removed 2/p2/molecule1_zoom_image.png', bbox: [1075, 2190, 227, 282], smiles: 'SMILES', molfile: 'Molfile' }
+      { src: 'static/data/WO2005011681A1_removed 2/p2/molecule0_input.png', bbox: [1314, 990, 433, 377], smiles: 'SMILES', molfile: 'Molfile' },
+      { src: 'static/data/WO2005011681A1_removed 2/p2/molecule1_input.png', bbox: [1075, 2190, 227, 282], smiles: 'SMILES', molfile: 'Molfile' }
     ]
   };
 
