@@ -52,3 +52,23 @@ button {
   text-align: center;
   margin-top: 5px;
 }
+
+.toggle-button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 5px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.markdown-details {
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 5px;
+  border-left: 3px solid #007bff;
+  margin-top: 5px;
+  display: none;
+}
