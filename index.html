@@ -29,6 +29,7 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
+  <link rel="stylesheet" href="static/css/bulma-example.css">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
@@ -37,6 +38,7 @@
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
+  <script src="static/js/bulma-example.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -52,7 +54,7 @@
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">MolMole</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -65,7 +67,7 @@
                   </div>
 
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">Institution Name<br>Conferance name and year</span>
+                    <span class="author-block">LG AI Research<br>Conferance name and year</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
 
@@ -129,11 +131,11 @@
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
-        <source src="static/videos/banner_video.mp4"
+        <source src="static/videos/ddu_demo.mov"
         type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        DEMO VIDEO
       </h2>
     </div>
   </div>
@@ -148,7 +150,24 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Extracting molecular structures and reaction data from scientific literature remains
+            a significant challenge due to the unstructured nature of chemical information em-
+            bedded in figures and diagrams. While deep learning has enabled automation,
+            existing approaches often rely on preprocessing steps or focus on isolated ele-
+            ments rather than full-page content, limiting their scalability and efficiency. We
+            introduce MolMole, a vision-based deep learning framework that directly pro-
+            cesses page-level molecular data, eliminating the need for external document pars-
+            ing. Unlike existing systems, MolMole integrates molecule detection, reaction
+            diagram parsing, OCSR, and an interactive editing tool into a single, end-to-end
+            workflow, ensuring efficient and accurate chemical data extraction. Additionally,
+            MolMole achieves higher processing speed and extraction accuracy than publicly
+            available benchmarks, making it well-suited for large-scale data applications. To
+            support robust evaluation, we establish a page-level test set and an evaluation met-
+            ric designed to assess molecular information extraction at the document level.
+            Through extensive evaluation, MolMole demonstrates superior performance over
+            existing approaches, providing a scalable and efficient solution for molecular data
+            extraction, cheminformatics, and AI-driven chemical research. An instance of the
+            MolMole web application is available at https://MOLMOLE.ai.
           </p>
         </div>
       </div>
@@ -158,106 +177,63 @@
 <!-- End paper abstract -->
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
+<!-- Molecule Section -->
+<section id="molecule-section" class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/example_1.png" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <h2 class="title is-3">Molecule</h2>
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="image-container">
+            <img id="switcher-image-molecule" src="static/images/jp3/p3.png" alt="Switchable Image">
+            <div id="overlay-molecule" class="bounding-box"></div>
+          </div>
+          <div class="buttons is-centered">
+            <button class="button is-light" onclick="changeImage('molecule', 'jp3')">1</button>
+            <button class="button is-light" onclick="changeImage('molecule', 'pp2')">2</button>
+            <button class="button is-light" onclick="changeImage('molecule', 'wp2')">3</button>
+          </div>
+        </div>
+        <div class="column is-half">
+          <div class="content">
+            <h3 class="title is-4">Recognition</h3>
+            <p id="markdown-content-molecule">Content for image 1.</p>
+            <div id="small-images-molecule"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
+<!-- Reaction Section -->
+<section id="reaction-section" class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
+      <h2 class="title is-3">Reaction</h2>
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="image-container">
+            <img id="switcher-image-reaction" src="static/images/jp3/p3.png" alt="Switchable Image">
+            <div id="overlay-reaction" class="bounding-box"></div>
+          </div>
+          <div class="buttons is-centered">
+            <button class="button is-light" onclick="changeImage('reaction', 'jp3')">1</button>
+            <button class="button is-light" onclick="changeImage('reaction', 'pp2')">2</button>
+            <button class="button is-light" onclick="changeImage('reaction', 'wp2')">3</button>
+          </div>
         </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
+        <div class="column is-half">
+          <div class="content">
+            <h3 class="title is-4">Recognition</h3>
+            <p id="markdown-content-reaction">Content for image 1.</p>
+            <div id="small-images-reaction"></div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
-
-
-
-
-
 
 <!-- Paper poster -->
 <section class="hero is-small is-light">
