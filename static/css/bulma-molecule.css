@@ -1,0 +1,111 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ECEBDE;
+  margin: 0;
+  padding: 0;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.clickable-image {
+  width: 100%;
+  height: auto;
+  margin: 10px auto;
+  cursor: pointer;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  display: block;
+  transition: transform 0.2s ease-in-out;
+}
+
+.clickable-image:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+}
+
+.image-paragraph {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bounding-box {
+  position: absolute;
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.3);
+  display: none;
+}
+
+.content {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.markdown-caption {
+  font-size: 14px;
+  font-style: italic;
+  color: #555;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.markdown-details {
+  font-size: 14px;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 5px;
+  border-left: 3px solid #007bff;
+  margin-top: 5px;
+  display: none;
+}
+
+.image-pair img {
+  width: 50%;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.image-pair img:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+  box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+}
+
+.image-pair-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
