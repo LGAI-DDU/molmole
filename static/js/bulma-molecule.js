@@ -107,7 +107,7 @@ function hideBoundingBox() {
   document.getElementById("overlay-molecule").style.display = 'none';
 }
 
-function changeImage(folder) {
+function changeMoleculePage(folder) {
   setInitialContent(folder);
   hideBoundingBox();
 }
