@@ -29,8 +29,7 @@
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
 
-  <link rel="stylesheet" href="static/css/bulma-molecule.css">
-
+  <link rel="stylesheet" href="static/css/bulma-results.css">
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="static/css/bulma-slider.min.css">
@@ -39,8 +38,7 @@
   href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="static/css/index.css">
 
-  <script src="static/js/bulma-molecule.js"></script>
-
+  <script src="static/js/bulma-results.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
@@ -168,7 +166,7 @@
         <div class="column is-half">
           <div class="image-container">
             <img id="switcher-image-molecule" src="static/data/journal_demo/p3/p3.png" alt="Molecule Image">
-            <div id="overlay-molecule" class="bounding-box"></div>
+            <div id="overlay-molecule" class="molecule-bounding-box"></div>
           </div>
           <div class="buttons is-centered">
             <button class="button is-light" onclick="changeMoleculePage('jp3')">1</button>
@@ -178,7 +176,7 @@
         <div class="column is-half">
           <div class="content">
             <h3 class="title is-4">Recognition</h3>
-            <p id="markdown-content-molecule">Molecule content here.</p>
+            <p id="markdown-content-molecule"></p>
             <div id="small-images-molecule" class="image-pair-container"></div>
           </div>
         </div>
@@ -196,18 +194,18 @@
         <div class="column is-half">
           <div class="image-container">
             <img id="switcher-image-reaction" src="static/data/CA3026592A1_reaction_sample2 1/p1/p1.png" alt="Reaction Image">
-            <div id="overlay-reaction" class="bounding-box"></div>
+            <div id="overlay-reaction" class="reaction-bounding-box"></div>
           </div>
           <div class="buttons is-centered">
-            <button class="button is-light" onclick="changeImage('reaction', 'cp1')">1</button>
-            <button class="button is-light" onclick="changeImage('reaction', 'wp2')">2</button>
+            <button class="button is-light" onclick="changeReactionPage('cp1')">1</button>
+            <button class="button is-light" onclick="changeReactionPage('wp2')">2</button>
           </div>
         </div>
         <div class="column is-half">
           <div class="content">
             <h3 class="title is-4">Recognition</h3>
-            <p id="markdown-content-reaction">Reaction content here.</p>
-            <div id="small-images-reaction"></div>
+            <p id="markdown-content-reaction"></p>
+            <div id="small-texts-reaction"></div>
           </div>
         </div>
       </div>
