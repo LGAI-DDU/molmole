@@ -113,7 +113,7 @@ async function updateSmallImages(folder) {
   const container = document.getElementById("small-images-molecule");
   container.innerHTML = '';
   container.style.overflowY = 'auto';
-  container.style.maxHeight = '700px';
+  container.style.maxHeight = '600px';
 
   if (moleculeImages[folder]) {
     moleculeImages[folder].forEach(image => {
@@ -271,7 +271,7 @@ async function updateSmallTexts(folder) {
   const container = document.getElementById('small-texts-reaction');
   container.innerHTML = '';
   container.style.overflowY = 'auto';
-  container.style.maxHeight = '700px';
+  container.style.maxHeight = '600px';
 
   if (reactionTexts[folder]) {
     reactionTexts[folder].forEach((reactionSet, index) => {
