@@ -9,7 +9,7 @@
   <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
   <meta property="og:url" content="URL OF THE WEBSITE"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image" content="static/images/molmole.png" />
   <meta property="og:image:width" content="1200"/>
   <meta property="og:image:height" content="630"/>
 
@@ -51,11 +51,11 @@
 
   <section class="hero">
     <div class="hero-body">
-      <div class="container is-max-desktop">
+      <div class="container is-max">
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <img src="static/images/smole.png" alt="MolMole Logo" width="200px">
-            <h1 class="title is-1 publication-title">MolMole</h1>
+            <h1 class="title is-1 publication-title">MolMole: Molecule Mining from Scientific Literature</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -66,15 +66,12 @@
                     <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
                   </span>
                   </div>
-
                   <div class="is-size-5 publication-authors">
-                    <span class="author-block">LG AI Research<br>Conferance name and year</span>
+                    <span class="author-block">LG AI Research</span>
                     <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
                   </div>
-
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
                       <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -84,8 +81,6 @@
                         <span>Paper</span>
                       </a>
                     </span>
-
-                    <!-- Data PDF link -->
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -105,10 +100,38 @@
   </div>
 </section>
 
+<!-- Paper abstract -->
+<section class="section hero">
+  <div class="container" style="max-width: 1200px;">
+    <div class="column is-centered has-text-centered">
+      <h2 class="title is-3 is-centered">Abstract</h2>
+      <div class="content has-text-justified">
+        <div class="has-text-centered">
+          <img src="static/images/pipeline_new.png" alt="MolMole Pipeline" width="75%">
+        </div>
+        <p>
+          The extraction of molecular structures and reaction data from scientific documents
+          is challenging due to their varied, unstructured chemical formats and complex
+          document layouts. We introduce MolMole, a vision-based deep learning frame-
+          work that combines molecule detection, reaction diagram parsing, optical chem-
+          ical structure recognition (OCSR), and an interactive editing tool into a unified
+          pipeline, designed to automate the extraction of chemical data directly from page-
+          level documents. To address the absence of page-level benchmark and evalua-
+          tion metric, we present a test set of 550 pages annotated with molecule bounding
+          boxes, reaction labels, and MOL files, accompanied by a novel evaluation met-
+          ric. Experimental results demonstrate that MolMole surpasses existing toolkits in
+          both accuracy and efficiency on our new benchmark dataset. The MolMole project
+          page and our test set can be found at https://MOLMOLE.ai.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
 
 <!-- Teaser video-->
 <section class="hero teaser">
-  <div class="container is-max-desktop">
+  <div class="container" style="max-width: 1200px;">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
         <!-- Your video here -->
@@ -123,45 +146,11 @@
 </section>
 <!-- End teaser video -->
 
-<!-- Paper abstract -->
-<section class="section hero">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Extracting molecular structures and reaction data from scientific literature remains
-            a significant challenge due to the unstructured nature of chemical information em-
-            bedded in figures and diagrams. While deep learning has enabled automation,
-            existing approaches often rely on preprocessing steps or focus on isolated ele-
-            ments rather than full-page content, limiting their scalability and efficiency. We
-            introduce MolMole, a vision-based deep learning framework that directly pro-
-            cesses page-level molecular data, eliminating the need for external document pars-
-            ing. Unlike existing systems, MolMole integrates molecule detection, reaction
-            diagram parsing, OCSR, and an interactive editing tool into a single, end-to-end
-            workflow, ensuring efficient and accurate chemical data extraction. Additionally,
-            MolMole achieves higher processing speed and extraction accuracy than publicly
-            available benchmarks, making it well-suited for large-scale data applications. To
-            support robust evaluation, we establish a page-level test set and an evaluation met-
-            ric designed to assess molecular information extraction at the document level.
-            Through extensive evaluation, MolMole demonstrates superior performance over
-            existing approaches, providing a scalable and efficient solution for molecular data
-            extraction, cheminformatics, and AI-driven chemical research. An instance of the
-            MolMole web application is available at https://MOLMOLE.ai.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
 <!-- Molecule Section -->
 <section id="molecule-section" class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Molecule</h2>
+    <div class="container" style="max-width: 1200px;">
+      <h2 class="title is-3 has-text-centered">Molecule</h2>
       <div class="columns is-centered">
         <div class="column is-half">
           <div class="image-container">
@@ -175,7 +164,6 @@
         </div>
         <div class="column is-half">
           <div class="content">
-            <h3 class="title is-4">Recognition</h3>
             <p id="markdown-content-molecule"></p>
             <div id="small-images-molecule" class="image-pair-container"></div>
           </div>
@@ -188,8 +176,8 @@
 <!-- Reaction Section -->
 <section id="reaction-section" class="hero is-small">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Reaction</h2>
+    <div class="container" style="max-width: 1200px;">
+      <h2 class="title is-3 has-text-centered">Reaction</h2>
       <div class="columns is-centered">
         <div class="column is-half">
           <div class="image-container">
@@ -203,7 +191,6 @@
         </div>
         <div class="column is-half">
           <div class="content">
-            <h3 class="title is-4">Recognition</h3>
             <p id="markdown-content-reaction"></p>
             <div id="small-texts-reaction"></div>
           </div>
@@ -216,7 +203,7 @@
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
+    <div class="container content" style="max-width: 1200px;">
       <h2 class="title">Citation</h2>
       <pre><code>
       </code></pre>

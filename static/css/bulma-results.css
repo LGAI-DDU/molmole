@@ -13,7 +13,36 @@ body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Image Container Styles */
+.markdown-caption {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.markdown-details {
+  font-size: 14px;
+  color: #333;
+  background-color: #F3F3F3;
+  padding: 6px;
+  border-left: 3px solid #0D6EFD;
+  margin-top: 6px;
+  display: none;
+}
+
+.molecule-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.clickable-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 .image-container {
   position: relative;
   text-align: center;
@@ -32,7 +61,6 @@ body {
   position: absolute;
   border: 2px solid red;
   background-color: rgba(255, 0, 0, 0.2);
-  display: none;
 }
 
 .image-pair {
@@ -44,6 +72,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  font-size: 14px;
 }
 
 .image-pair-container {
@@ -65,7 +94,7 @@ body {
 }
 
 .image-pair img:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
   border-color: #0D6EFD;
   box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
 }
@@ -83,50 +112,41 @@ body {
 
 .reaction-block:hover {
   transform: scale(1.02);
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-color: #0D6EFD;
+  box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
 }
 
 .reaction-bounding-box[data-type="reactant"] {
   position: absolute;
   border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
 .reaction-bounding-box[data-type="condition"] {
   position: absolute;
   border: 2px solid green;
+  background-color: rgba(0, 255, 0, 0.2);
 }
 
 .reaction-bounding-box[data-type="product"] {
   position: absolute;
   border: 2px solid blue;
+  background-color: rgba(0, 0, 255, 0.2);
 }
 
-.markdown-caption {
-  font-size: 14px;
-  font-style: italic;
-  color: #666;
-  text-align: center;
-  margin-top: 5px;
-}
-
-.markdown-details {
-  font-size: 14px;
-  color: #333;
-  background-color: #F3F3F3;
-  padding: 6px;
-  border-left: 3px solid #0D6EFD;
-  margin-top: 6px;
-  display: none;
+.reaction-title {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .reaction-table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 0.5rem;
+  font-size: 12px;
 }
 
 .reaction-table td {
-  padding: 4px;
+  padding: 6px;
 }
 
 .reaction-table th {
@@ -142,18 +162,4 @@ body {
 .reaction-table .reaction-smiles {
   width: 100%;
   text-align: left;
-}
-
-.button {
-  background-color: #0D6EFD;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.button:hover {
-  background-color: #004cb3;
 }
