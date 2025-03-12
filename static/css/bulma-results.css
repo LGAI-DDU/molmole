@@ -36,6 +36,10 @@ body {
   font-weight: bold;
 }
 
+.molecule-text {
+  font-size: 12px;
+}
+
 .clickable-image-wrapper {
   display: flex;
   justify-content: center;

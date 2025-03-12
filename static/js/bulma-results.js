@@ -113,7 +113,7 @@ async function updateSmallImages(folder) {
   const container = document.getElementById("small-images-molecule");
   container.innerHTML = '';
   container.style.overflowY = 'auto';
-  container.style.maxHeight = '750px';
+  container.style.maxHeight = '700px';
 
   if (moleculeImages[folder]) {
     moleculeImages[folder].forEach(image => {
@@ -139,6 +139,7 @@ async function updateSmallImages(folder) {
       div.appendChild(imgWrapper);
 
       const smilesText = document.createElement('p');
+      smilesText.className = 'molecule-text';
       smilesText.innerText = `${image.smiles}`;
       div.appendChild(smilesText);
 
@@ -270,7 +271,7 @@ async function updateSmallTexts(folder) {
   const container = document.getElementById('small-texts-reaction');
   container.innerHTML = '';
   container.style.overflowY = 'auto';
-  container.style.maxHeight = '750px';
+  container.style.maxHeight = '700px';
 
   if (reactionTexts[folder]) {
     reactionTexts[folder].forEach((reactionSet, index) => {
