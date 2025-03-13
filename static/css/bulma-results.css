@@ -61,6 +61,12 @@ body {
   cursor: pointer;
 }
 
+.gray-bounding-box {
+  position: absolute;
+  border: 2px solid #CCC;
+  background-color: rgba(204, 204, 204, 0.2);
+}
+
 .molecule-bounding-box {
   position: absolute;
   border: 2px solid red;
@@ -120,19 +126,19 @@ body {
   box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
 }
 
-.reaction-bounding-box[data-type="reactant"] {
+.reaction-bounding-box[data-type="Reactant"] {
   position: absolute;
   border: 2px solid red;
   background-color: rgba(255, 0, 0, 0.2);
 }
 
-.reaction-bounding-box[data-type="condition"] {
+.reaction-bounding-box[data-type="Condition"] {
   position: absolute;
   border: 2px solid green;
   background-color: rgba(0, 255, 0, 0.2);
 }
 
-.reaction-bounding-box[data-type="product"] {
+.reaction-bounding-box[data-type="Product"] {
   position: absolute;
   border: 2px solid blue;
   background-color: rgba(0, 0, 255, 0.2);
@@ -151,6 +157,7 @@ body {
 
 .reaction-table td {
   padding: 6px;
+  max-width: 200px;
 }
 
 .reaction-table th {
@@ -166,4 +173,5 @@ body {
 .reaction-table .reaction-smiles {
   width: 100%;
   text-align: left;
+  overflow: hidden;
 }
