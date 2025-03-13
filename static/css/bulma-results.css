@@ -6,6 +6,13 @@ body {
   padding: 0;
 }
 
+.abstract {
+  margin: 20px;
+  padding: 20px;
+  border: #FFF solid 1px;
+  border-radius: 12px;
+}
+
 .content {
   padding: 20px;
   background: #FFF;
