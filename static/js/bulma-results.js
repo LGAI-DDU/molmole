@@ -196,7 +196,7 @@ async function loadReaction(folder) {
     const reactants = await Promise.all(reaction.reactants.map(async (item) => ({
       name: "Reactant",
       category: item.category,
-      smiles: await loadTxts(`/static/data/${folder}/molecule${item.matching_idx[1]}_smiles.txt`),
+      smiles: await loadTxts(`static/data/${folder}/molecule${item.matching_idx[1]}_smiles.txt`),
       bbox: item.bbox
     })));
     const conditions = reaction.conditions.map((item) => ({
@@ -208,7 +208,7 @@ async function loadReaction(folder) {
     const products = await Promise.all(reaction.products.map(async (item) => ({
       name: "Product",
       category: item.category,
-      smiles: await loadTxts(`/static/data/${folder}/molecule${item.matching_idx[1]}_smiles.txt`),
+      smiles: await loadTxts(`static/data/${folder}/molecule${item.matching_idx[1]}_smiles.txt`),
       bbox: item.bbox
     })));
     return [...reactants, ...conditions, ...products];
