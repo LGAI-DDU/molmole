@@ -1,13 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
   setMolecules('journal_demo/p3');
   setReactions('CA3026592A1_reaction_sample2 1/p1');
-  hideOverlay();
+  hideMolecules();
+  hideReactions();
 });
-
-function hideOverlay() {
-  document.getElementById("overlay-molecule").style.display = 'none';
-  document.getElementById("overlay-reaction").style.display = 'none';
-}
 
 async function loadTxts(path) {
   const response = await fetch(path);
@@ -38,6 +34,7 @@ function setMolecules(folder) {
   page.src = `static/data/${folder}/${key}.png`;
   page.dataset.originalSrc = `static/data/${folder}/${key}.png`;
   updateMolecules(folder);
+  overlayMolecules(folder);
 }
 
 async function loadMolecules(folder) {
@@ -64,7 +61,7 @@ async function updateMolecules(folder) {
 
     const imgWrapper = document.createElement('div');
     imgWrapper.className = 'clickable-image-wrapper';
-    imgWrapper.onclick = () => showOverlayMolecule(image.bbox);
+    imgWrapper.onclick = () => highlightMolecules(image.bbox);
 
     const img1 = document.createElement('img');
     img1.src = image.input;
@@ -95,7 +92,29 @@ async function updateMolecules(folder) {
   });
 }
 
-function showOverlayMolecule(bbox) {
+async function overlayMolecules(folder) {
+  const molecules = await loadMolecules(folder);
+  const img = document.getElementById("switcher-image-molecule");
+  const { width: imgWidth, height: imgHeight } = img.getBoundingClientRect();
+  const originalImage = new Image();
+  originalImage.src = img.dataset.originalSrc;
+  originalImage.onload = () => {
+    const scaleX = imgWidth / originalImage.naturalWidth;
+    const scaleY = imgHeight / originalImage.naturalHeight;
+    const overlayContainer = document.getElementById("overlay-molecule");
+    overlayContainer.innerHTML = '';
+    molecules.forEach(item => {
+      const [x, y, width, height] = item.bbox.map((val, i) => val * (i % 2 === 0 ? scaleX : scaleY));
+      const overlay = document.createElement('div');
+      overlay.className = 'molecule-all';
+      Object.assign(overlay.style, { left: `${x}px`, top: `${y}px`, width: `${width}px`, height: `${height}px`, display: 'block' });
+      overlayContainer.appendChild(overlay);
+    });
+    overlayContainer.style.display = 'block';
+  }
+}
+
+function highlightMolecules(bbox) {
   const img = document.getElementById("switcher-image-molecule");
   const { width: imgWidth, height: imgHeight } = img.getBoundingClientRect();
   const originalImage = new Image();
@@ -104,7 +123,7 @@ function showOverlayMolecule(bbox) {
     const scaleX = imgWidth / originalImage.naturalWidth;
     const scaleY = imgHeight / originalImage.naturalHeight;
     const [x, y, width, height] = bbox.map((val, i) => val * (i % 2 === 0 ? scaleX : scaleY));
-    const block = document.getElementById("overlay-molecule");
+    const block = document.getElementById("highlight-molecule");
     block.className = 'molecule-bounding-box';
     Object.assign(block.style, {
       left: `${x}px`,
@@ -131,9 +150,14 @@ function toggleMolfile(container, molfile) {
   }
 }
 
+function hideMolecules() {
+  document.getElementById("overlay-molecule").style.display = 'none';
+  document.getElementById("highlight-molecule").style.display = 'none';
+}
+
 function changeMoleculePage(folder) {
   setMolecules(folder);
-  hideOverlay();
+  hideMolecules();
 }
 
 async function loadReactionJsons(folder) {
@@ -158,6 +182,7 @@ function setReactions(folder) {
   const key = folder.split('/')[1];
   page.src = `static/data/${folder}/${key}.png`;
   page.dataset.originalSrc = `static/data/${folder}/${key}.png`;
+  overlayReactions(folder);
   updateReactions(folder);
 }
 
@@ -189,7 +214,7 @@ async function loadReaction(folder) {
 
 async function updateReactions(folder) {
   const reactions = await loadReaction(folder);
-  const container = document.getElementById('small-texts-reaction');
+  const container = document.getElementById('texts-reaction');
   container.innerHTML = '';
   container.style.overflowY = 'auto';
   container.style.maxHeight = '600px';
@@ -226,12 +251,43 @@ async function updateReactions(folder) {
     });
 
     block.appendChild(table);
-    block.onclick = () => showReactionOverlay(reaction);
+    block.onclick = () => highlightReactions(reaction);
     container.appendChild(block);
   });
 }
 
-function showReactionOverlay(reactions) {
+async function overlayReactions(folder) {
+  const reactions = await loadReaction(folder);
+  const img = document.getElementById('switcher-image-reaction');
+  const { width: imgWidth, height: imgHeight } = img.getBoundingClientRect();
+  const originalImage = new Image();
+  originalImage.src = img.dataset.originalSrc;
+  originalImage.onload = () => {
+    const scaleX = imgWidth / originalImage.naturalWidth;
+    const scaleY = imgHeight / originalImage.naturalHeight;
+    const overlayContainer = document.getElementById("overlay-reaction");
+    overlayContainer.innerHTML = '';
+
+    reactions.forEach(reaction => {
+      reaction.forEach(item => {
+        const [x, y, width, height] = item.bbox.map((val, i) => val * (i % 2 === 0 ? scaleX : scaleY));
+        const allOverlay = document.createElement('div');
+        allOverlay.className = 'reaction-all';
+        Object.assign(allOverlay.style, { 
+          left: `${x}px`, 
+          top: `${y}px`, 
+          width: `${width}px`, 
+          height: `${height}px`, 
+          display: 'block' 
+        });
+        overlayContainer.appendChild(allOverlay);
+      });
+    });
+    overlayContainer.style.display = 'block'; 
+  };
+}
+
+function highlightReactions(reactions) {
   const img = document.getElementById('switcher-image-reaction');
   const { width: imgWidth, height: imgHeight } = img.getBoundingClientRect();
   const originalImage = new Image();
@@ -240,21 +296,27 @@ function showReactionOverlay(reactions) {
   originalImage.onload = () => {
     const scaleX = imgWidth / originalImage.naturalWidth;
     const scaleY = imgHeight / originalImage.naturalHeight;
-    const overlayContainer = document.getElementById("overlay-reaction");
-    overlayContainer.innerHTML = '';
+    const block = document.getElementById("overlay-reaction");
+    const coloredOverlays = block.querySelectorAll('.reaction-bounding-box');
+    coloredOverlays.forEach(overlay => overlay.remove());
     reactions.forEach(item => {
       const [x, y, width, height] = item.bbox.map((val, i) => val * (i % 2 === 0 ? scaleX : scaleY));
       const overlay = document.createElement('div');
       overlay.className = 'reaction-bounding-box';
       overlay.setAttribute('data-type', item.name);
       Object.assign(overlay.style, { left: `${x}px`, top: `${y}px`, width: `${width}px`, height: `${height}px`, display: 'block' });
-      overlayContainer.appendChild(overlay);
+      block.appendChild(overlay);
     });
-    overlayContainer.style.display = 'block';
+    block.style.display = 'block';
   };
+}
+
+function hideReactions() {
+  document.getElementById("overlay-reaction").style.display = 'none';
+  document.getElementById("highlight-reaction").style.display = 'none';
 }
 
 function changeReactionPage(folder) {
   setReactions(folder);
-  hideOverlay();
+  hideReactions();
 }

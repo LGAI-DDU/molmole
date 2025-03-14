@@ -68,16 +68,18 @@ body {
   cursor: pointer;
 }
 
-.gray-bounding-box {
+.molecule-all {
   position: absolute;
   border: 2px solid #CCC;
   background-color: rgba(204, 204, 204, 0.2);
+  display: none;
 }
 
 .molecule-bounding-box {
   position: absolute;
   border: 2px solid red;
   background-color: rgba(255, 0, 0, 0.2);
+  display: none;
 }
 
 .image-pair {
@@ -131,6 +133,12 @@ body {
   transform: scale(1.02);
   border-color: #0D6EFD;
   box-shadow: 0 4px 8px rgba(13, 110, 253, 0.3);
+}
+
+.reaction-all {
+  position: absolute;
+  border: 2px solid #CCC;
+  background-color: rgba(204, 204, 204, 0.2);
 }
 
 .reaction-bounding-box[data-type="Reactant"] {
