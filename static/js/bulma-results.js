@@ -103,13 +103,17 @@ async function overlayMolecules(folder) {
     const scaleY = imgHeight / originalImage.naturalHeight;
     const overlayContainer = document.getElementById("overlay-molecule");
     overlayContainer.innerHTML = '';
+    const canvas = document.createElement('canvas');
+    canvas.width = imgWidth;
+    canvas.height = imgHeight;
+    const ctx = canvas.getContext('2d');
     molecules.forEach(item => {
       const [x, y, width, height] = item.bbox.map((val, i) => val * (i % 2 === 0 ? scaleX : scaleY));
-      const overlay = document.createElement('div');
-      overlay.className = 'molecule-all';
-      Object.assign(overlay.style, { left: `${x}px`, top: `${y}px`, width: `${width}px`, height: `${height}px`, display: 'block' });
-      overlayContainer.appendChild(overlay);
+      ctx.strokeStyle = "gray";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(x, y, width, height);
     });
+    overlayContainer.appendChild(canvas);
     overlayContainer.style.display = 'block';
   }
 }
@@ -267,23 +271,23 @@ async function overlayReactions(folder) {
     const scaleY = imgHeight / originalImage.naturalHeight;
     const overlayContainer = document.getElementById("overlay-reaction");
     overlayContainer.innerHTML = '';
-
+    const canvas = document.createElement('canvas');
+    canvas.width = imgWidth;
+    canvas.height = imgHeight;
+    const ctx = canvas.getContext('2d');
     reactions.forEach(reaction => {
       reaction.forEach(item => {
-        const [x, y, width, height] = item.bbox.map((val, i) => val * (i % 2 === 0 ? scaleX : scaleY));
-        const allOverlay = document.createElement('div');
-        allOverlay.className = 'reaction-all';
-        Object.assign(allOverlay.style, { 
-          left: `${x}px`, 
-          top: `${y}px`, 
-          width: `${width}px`, 
-          height: `${height}px`, 
-          display: 'block' 
-        });
-        overlayContainer.appendChild(allOverlay);
+        const [x, y, width, height] = item.bbox.map((val, i) =>
+          val * (i % 2 === 0 ? scaleX : scaleY)
+        );
+        ctx.strokeStyle = "gray";
+        ctx.lineWidth = 2;
+        ctx.strokeRect(x, y, width, height);
       });
     });
-    overlayContainer.style.display = 'block'; 
+
+    overlayContainer.appendChild(canvas);
+    overlayContainer.style.display = 'block';
   };
 }
 
