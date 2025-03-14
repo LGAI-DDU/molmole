@@ -138,20 +138,20 @@ body {
 
 .reaction-bounding-box[data-type="Reactant"] {
   position: absolute;
-  border: 2px solid red;
-  background-color: rgba(255, 0, 0, 0.2);
+  border: 2px solid blue;
+  background-color: rgba(0, 0, 255, 0.2);
 }
 
 .reaction-bounding-box[data-type="Condition"] {
   position: absolute;
-  border: 2px solid green;
-  background-color: rgba(0, 255, 0, 0.2);
+  border: 2px solid red;
+  background-color: rgba(255, 0, 0, 0.2);
 }
 
 .reaction-bounding-box[data-type="Product"] {
   position: absolute;
-  border: 2px solid blue;
-  background-color: rgba(0, 0, 255, 0.2);
+  border: 2px solid cyan;
+  background-color: rgba(0, 255, 255, 0.2);
 }
 
 .reaction-title {
