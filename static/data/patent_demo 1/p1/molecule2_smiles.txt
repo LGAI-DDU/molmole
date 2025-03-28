@@ -1,1 +1,0 @@
-O=C(NC1=CN2N=C(Cl)C=CC2=N1)C(F)(F)F

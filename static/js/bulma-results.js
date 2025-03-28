@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  setMolecules('journal_demo/p3');
+  setMolecules('AU2004259738B2_page_135/p1');
   setReactions('CA3026592A1_reaction_sample2 1/p1');
   hideMolecules();
   hideReactions();

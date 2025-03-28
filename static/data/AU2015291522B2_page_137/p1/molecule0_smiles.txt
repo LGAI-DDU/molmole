@@ -1,0 +1,1 @@
+CC(C)(C)c1cc(NC(=O)Nc2ccc3nc(C#Cc4ccc(OCCN5CCOCC5)cc4)cn3c2)no1

@@ -1,0 +1,1 @@
+CCN[C@H]1C[C@H](C)S(=O)(=O)c2sc(S(=O)(=O)NC(=O)C(C)O)cc21
