@@ -1,7 +1,7 @@
 /* General Styles */
 body {
   font-family: Arial, sans-serif;
-  background-color: #ECEBDE;
+  background-color: #FFFFFF;
   margin: 0;
   padding: 0;
 }
@@ -9,15 +9,24 @@ body {
 .abstract {
   margin: 20px;
   padding: 20px;
-  border: #FFF solid 1px;
+  border: #DDD solid 1px;
   border-radius: 12px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
 }
 
 .content {
   padding: 20px;
   background: #FFF;
   border-radius: 12px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  border: #DDD solid 1px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+
+}
+
+video {
+  border: 1px solid #DDD; /* 원하는 색상과 두께 */
+  border-radius: 10px;     /* 테두리를 둥글게 하고 싶다면 */
+  /* box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); 선택 사항: 약한 그림자 */
 }
 
 .markdown-caption {
@@ -64,7 +73,9 @@ body {
   width: 100%;
   height: auto;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  border: #DDD solid 1px;
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); */
+
   cursor: pointer;
 }
 
@@ -184,4 +195,8 @@ body {
   width: 100%;
   text-align: left;
   overflow: hidden;
+}
+html body .footer {
+  background-color: #F0F0F0;
+  color: #333;
 }
