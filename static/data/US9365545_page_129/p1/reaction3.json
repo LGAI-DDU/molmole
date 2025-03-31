@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [696, 1180, 54, 15], "category": "txt", "text": "DAST"}, {"bbox": [695, 1208, 55, 20], "category": "txt", "text": "Step D"}], "products": [{"bbox": [345, 1400, 323, 160], "category": "mol", "matching_idx": [0, 1]}], "reactants": [{"bbox": [342, 1136, 324, 136], "category": "mol", "matching_idx": [0, 8]}], "summary": "undefined"}

@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [782, 1605, 65, 19], "category": "txt", "text": "CH3CN"}, {"bbox": [851, 1637, 157, 21], "category": "txt", "text": "N-methylpiprazine"}], "products": [{"bbox": [316, 1823, 634, 325], "category": "mol", "matching_idx": [0, 2]}], "reactants": [{"bbox": [820, 1155, 626, 349], "category": "mol", "matching_idx": [0, 6]}], "summary": "undefined"}

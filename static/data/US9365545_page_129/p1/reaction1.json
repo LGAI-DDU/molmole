@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [637, 635, 55, 19], "category": "txt", "text": "1. BH3"}, {"bbox": [636, 675, 127, 48], "category": "txt", "text": "2. H2O2/NaOH Step B"}], "products": [{"bbox": [309, 868, 342, 137], "category": "mol", "matching_idx": [0, 0]}], "reactants": [{"bbox": [331, 604, 279, 136], "category": "mol", "matching_idx": [0, 9]}], "summary": "undefined"}

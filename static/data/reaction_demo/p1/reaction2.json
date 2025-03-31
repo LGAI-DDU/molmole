@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [426, 1711, 260, 40], "category": "txt", "text": "H2SO4/H2O/THF"}], "products": [{"bbox": [670, 1553, 368, 280], "category": "mol", "matching_idx": [0, 7]}], "reactants": [{"bbox": [1599, 1163, 393, 301], "category": "mol", "matching_idx": [0, 0]}], "summary": "undefined"}

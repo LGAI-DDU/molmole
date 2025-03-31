@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [748, 881, 110, 19], "category": "txt", "text": "deacetylation"}], "products": [{"bbox": [900, 717, 408, 274], "category": "mol", "matching_idx": [0, 1]}], "reactants": [{"bbox": [309, 717, 415, 274], "category": "mol", "matching_idx": [0, 0]}], "summary": "undefined"}

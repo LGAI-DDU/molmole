@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [586, 471, 154, 20], "category": "txt", "text": "piprazine/pyridine"}, {"bbox": [631, 503, 64, 15], "category": "txt", "text": "dioxane"}], "products": [{"bbox": [778, 282, 297, 276], "category": "mol", "matching_idx": [0, 7]}], "reactants": [{"bbox": [264, 362, 297, 196], "category": "mol", "matching_idx": [0, 3]}], "summary": "undefined"}

@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [705, 1471, 34, 15], "category": "txt", "text": "HCl"}, {"bbox": [695, 1501, 54, 20], "category": "txt", "text": "Step E"}], "products": [{"bbox": [256, 1722, 216, 118], "category": "mol", "matching_idx": [0, 10]}], "reactants": [{"bbox": [345, 1400, 323, 160], "category": "mol", "matching_idx": [0, 1]}], "summary": "undefined"}

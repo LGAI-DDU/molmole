@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [915, 2421, 55, 31], "category": "txt", "text": "le-1"}, {"bbox": [884, 2500, 193, 40], "category": "txt", "text": "NaOAc/Et3N"}], "products": [{"bbox": [1113, 2319, 793, 310], "category": "mol", "matching_idx": [0, 2]}], "reactants": [{"bbox": [404, 2337, 518, 287], "category": "mol", "matching_idx": [0, 3]}], "summary": "undefined"}

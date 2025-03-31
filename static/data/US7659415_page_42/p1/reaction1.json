@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [534, 1429, 72, 19], "category": "txt", "text": "1) nBuLi"}, {"bbox": [534, 1465, 95, 21], "category": "txt", "text": "2) B(OiPr)3"}], "products": [{"bbox": [684, 1358, 195, 155], "category": "mol", "matching_idx": [0, 7]}], "reactants": [{"bbox": [265, 1301, 227, 246], "category": "mol", "matching_idx": [0, 9]}], "summary": "undefined"}

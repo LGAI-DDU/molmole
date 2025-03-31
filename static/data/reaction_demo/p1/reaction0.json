@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [724, 1291, 266, 40], "category": "txt", "text": "NaNO2/H2SO4/KI"}], "products": [{"bbox": [999, 1193, 254, 254], "category": "mol", "matching_idx": [0, 4]}], "reactants": [{"bbox": [433, 1181, 276, 254], "category": "mol", "matching_idx": [0, 6]}], "summary": "undefined"}

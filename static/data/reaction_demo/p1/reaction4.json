@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [691, 2030, 189, 42], "category": "txt", "text": "K2CO3/DMF"}, {"bbox": [665, 2132, 219, 119], "category": "mol", "matching_idx": [0, 10]}], "products": [{"bbox": [897, 1984, 410, 215], "category": "mol", "matching_idx": [0, 8]}], "reactants": [{"bbox": [415, 2012, 246, 150], "category": "mol", "matching_idx": [0, 11]}], "summary": "undefined"}

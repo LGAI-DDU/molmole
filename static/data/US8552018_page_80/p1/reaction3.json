@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [1335, 880, 150, 19], "category": "txt", "text": "BrCH2CH2CH2Cl"}, {"bbox": [1337, 914, 145, 19], "category": "txt", "text": "CH3CN, CS2CO3"}], "products": [{"bbox": [820, 1155, 626, 349], "category": "mol", "matching_idx": [0, 6]}], "reactants": [{"bbox": [900, 717, 408, 274], "category": "mol", "matching_idx": [0, 1]}], "summary": "undefined"}

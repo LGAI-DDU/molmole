@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
 <head>
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
@@ -67,12 +68,16 @@
                   </span> -->
                   <!-- </div> -->
                   
-                  <div class="is-size-5 publication-authors">
-                    <span class="author-block">LG AI Research</span>
-                    <span class="author-email"><br>**@lgresearch.ai</span>
-                    <span class="eql-cntrb"><small><br>For further inquiries or potential collaborations, feel free to reach out via the email above.</small></span>
+                  <div class="is-size-6 publication-authors">
+                    <span class="author-block"><strong>LG AI Research</strong></span>
+                    <span class="author-email">
+                      <br><a href="mailto:contact_us@lgresearch.ai"><small>contact_us@lgresearch.ai</small></a>
+                    </span>
+                    <span class="eql-cntrb">
+                      <br><small>*Molmole will launch soon, with test benchmarks released accordingly.</small>
+                    </span>
                   </div>
-                  
+
                   <div class="column has-text-centered">
                     <div class="publication-links">
                       <span class="link-block">
@@ -103,25 +108,23 @@
   </div>
 </section>
 
-<section class="hero">
+<section class="hero" style="padding-top: 0rem; padding-bottom: 0rem;">
   <div class="container" style="max-width: 1100px;">
     <div class="column has-text-centered">
       <img src="static/images/MolMole_Workflow_2.png" alt="MolMole Logo" width="800px">
     </div>
   </div>
+</section>
 
 <!-- Paper abstract -->
-<section class="section hero">
+<section class="section hero" style="padding-top: 0rem; padding-bottom: 0rem;">
   <div class="container" style="max-width: 1100px;">
     <div class="column is-centered has-text-centered">
-      <h2 class="title is-3 is-centered">Abstract</h2>
-      <div class="abstract has-text-justified">
+      <h2 class="title is-4 is-centered">Abstract</h2>
+      <!-- <div class="abstract has-text-justified"> -->
+        <div class="abstract has-text-justified is-size-6">
         <p>
-          The extraction of molecular structures and reaction data from scientific documents is challenging due to their varied, unstructured chemical formats and complex document layouts.
-          We introduce MolMole, a vision-based deep learning framework that combines molecule detection, reaction diagram parsing, optical chemical structure recognition (OCSR), and an interactive editing tool into a unified pipeline, designed to automate the extraction of chemical data directly from page-level documents.
-          To address the absence of page-level benchmark and evaluation metric, we present a test set of 550 pages annotated with molecule bounding boxes, reaction labels, and MOL files, accompanied by a novel evaluation metric.
-          Experimental results demonstrate that MolMole surpasses existing toolkits in both accuracy and efficiency on our new benchmark dataset.
-          The MolMole project page and our test set can be found at https://MOLMOLE.ai.
+          The extraction of molecular structures and reaction data from scientific documents is challenging due to their varied, unstructured chemical formats and complex document layouts. We introduce MolMole, a vision-based deep learning framework that combines molecule detection, reaction diagram parsing, optical chemical structure recognition (OCSR) into a unified pipeline, designed to automate the extraction of chemical data directly from page-level documents. To address the absence of page-level benchmark and evaluation metric, we present a test set of 550 pages annotated with molecule bounding boxes, reaction labels, and MOLfiles, accompanied by a novel evaluation metric. Experimental results demonstrate that MolMole surpasses existing toolkits on our new benchmark and public dataset. 
         </p>
       </div>
     </div>
@@ -132,15 +135,11 @@
 <!-- Teaser video-->
 <section class="hero teaser">
   <div class="container" style="max-width: 1100px;">
-    <div class="hero-body">
+    <div class="hero-body has-text-centered">
+      <!-- <h2 class="title is-4">Demo Video</h2> -->
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
-        <source src="static/videos/tech_report_demo.mov"
-        type="video/mp4">
+        <source src="static/videos/tech_report_demo_fast.mov" type="video/mp4">
       </video>
-      <!-- <h2 class="subtitle has-text-centered">
-        MolMole Service
-      </h2> -->
     </div>
   </div>
 </section>
@@ -150,7 +149,7 @@
 <section id="molecule-section" class="hero is-small">
   <div class="hero-body">
     <div class="container" style="max-width: 1100px;">
-      <h2 class="title is-3 has-text-centered">Example Molecule Conversion</h2>
+      <h2 class="title is-4 has-text-centered">Example Molecule Conversion</h2>
       <div class="columns is-centered">
         <div class="column is-half">
           <div class="image-container">
@@ -182,7 +181,7 @@
 <section id="reaction-section" class="hero is-small">
   <div class="hero-body">
     <div class="container" style="max-width: 1100px;">
-      <h2 class="title is-3 has-text-centered">Example Reaction Parsing</h2>
+      <h2 class="title is-4 has-text-centered">Example Reaction Parsing</h2>
       <div class="columns is-centered">
         <div class="column is-half">
           <div class="image-container">
@@ -191,8 +190,10 @@
             <img id="switcher-image-reaction" src="static/data/CA3026592A1_reaction_sample2 1/p1/p1.png" alt="Reaction Image">
           </div>
           <div class="buttons is-centered">
-            <button class="button is-light" onclick="changeReactionPage('CA3026592A1_reaction_sample2 1/p1')">1</button>
-            <button class="button is-light" onclick="changeReactionPage('WO2005011681A1_removed 2/p2')">2</button>
+            <button class="button is-light" onclick="changeReactionPage('reaction_demo/p1')">1</button>
+            <button class="button is-light" onclick="changeReactionPage('US7659415_page_42/p1')">2</button>
+            <button class="button is-light" onclick="changeReactionPage('US8552018_page_80/p1')">3</button>
+            <button class="button is-light" onclick="changeReactionPage('US9365545_page_129/p1')">4</button>
           </div>
         </div>
         <div class="column is-half">

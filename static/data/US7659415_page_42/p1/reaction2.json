@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [1104, 1413, 111, 38], "category": "txt", "text": "dihydropyran PPTs"}], "products": [{"bbox": [966, 1591, 226, 246], "category": "mol", "matching_idx": [0, 1]}], "reactants": [{"bbox": [935, 1360, 143, 156], "category": "mol", "matching_idx": [0, 8]}], "summary": "undefined"}

@@ -1,0 +1,1 @@
+CC(C)(C)c1cc(-c2cc(F)cc(Br)c2OCc2ccccc2)cc(C(C)(C)C)c1

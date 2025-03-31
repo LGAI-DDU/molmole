@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   setMolecules('AU2004259738B2_page_135/p1');
-  setReactions('CA3026592A1_reaction_sample2 1/p1');
+  setReactions('reaction_demo/p1');
   hideMolecules();
   hideReactions();
 });
@@ -190,6 +190,32 @@ function setReactions(folder) {
   updateReactions(folder);
 }
 
+// async function loadReaction(folder) {
+//   const data = await loadReactionJsons(folder);
+//   const reactions = await Promise.all(data.map(async (reaction) => {
+//     const reactants = await Promise.all(reaction.reactants.map(async (item) => ({
+//       name: "Reactant",
+//       category: item.category,
+//       smiles: await loadTxts(`static/data/${folder}/molecule${item.matching_idx[1]}_smiles.txt`),
+//       bbox: item.bbox
+//     })));
+//     const conditions = reaction.conditions.map((item) => ({
+//       name: "Condition",
+//       category: item.category,
+//       smiles: "SMILES",
+//       bbox: item.bbox
+//     }));
+//     const products = await Promise.all(reaction.products.map(async (item) => ({
+//       name: "Product",
+//       category: item.category,
+//       smiles: await loadTxts(`static/data/${folder}/molecule${item.matching_idx[1]}_smiles.txt`),
+//       bbox: item.bbox
+//     })));
+//     return [...reactants, ...conditions, ...products];
+//   }));
+//   return reactions;
+// }
+
 async function loadReaction(folder) {
   const data = await loadReactionJsons(folder);
   const reactions = await Promise.all(data.map(async (reaction) => {
@@ -199,22 +225,34 @@ async function loadReaction(folder) {
       smiles: await loadTxts(`static/data/${folder}/molecule${item.matching_idx[1]}_smiles.txt`),
       bbox: item.bbox
     })));
-    const conditions = reaction.conditions.map((item) => ({
-      name: "Condition",
-      category: item.category,
-      smiles: "SMILES",
-      bbox: item.bbox
+
+    const conditions = await Promise.all(reaction.conditions.map(async (item) => {
+      let smiles;
+      if (item.category === "mol") {
+        smiles = await loadTxts(`static/data/${folder}/molecule${item.matching_idx[1]}_smiles.txt`);
+      } else {
+        smiles = item.text;
+      }
+      return {
+        name: "Condition",
+        category: item.category,
+        smiles,
+        bbox: item.bbox
+      };
     }));
+
     const products = await Promise.all(reaction.products.map(async (item) => ({
       name: "Product",
       category: item.category,
       smiles: await loadTxts(`static/data/${folder}/molecule${item.matching_idx[1]}_smiles.txt`),
       bbox: item.bbox
     })));
+
     return [...reactants, ...conditions, ...products];
   }));
   return reactions;
 }
+
 
 async function updateReactions(folder) {
   const reactions = await loadReaction(folder);

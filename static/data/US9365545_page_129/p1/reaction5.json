@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [500, 1616, 335, 172], "category": "mol", "matching_idx": [0, 6]}, {"bbox": [580, 1803, 177, 43], "category": "txt", "text": "HBTU/DIPEA/DCM Step F"}], "products": [{"bbox": [246, 1896, 634, 248], "category": "mol", "matching_idx": [0, 3]}], "reactants": [{"bbox": [256, 1722, 216, 118], "category": "mol", "matching_idx": [0, 10]}], "summary": "undefined"}

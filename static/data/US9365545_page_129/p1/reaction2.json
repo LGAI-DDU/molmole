@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [681, 910, 103, 15], "category": "txt", "text": "Dess-Martin"}, {"bbox": [705, 947, 55, 17], "category": "txt", "text": "Step C"}], "products": [{"bbox": [342, 1136, 324, 136], "category": "mol", "matching_idx": [0, 8]}], "reactants": [{"bbox": [309, 868, 342, 137], "category": "mol", "matching_idx": [0, 0]}], "summary": "undefined"}

@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [541, 377, 68, 16], "category": "txt", "text": "BOMCI"}, {"bbox": [547, 413, 56, 45], "category": "txt", "text": "DCM Step A"}], "products": [{"bbox": [331, 604, 279, 136], "category": "mol", "matching_idx": [0, 9]}], "reactants": [{"bbox": [234, 343, 280, 136], "category": "mol", "matching_idx": [0, 4]}], "summary": "undefined"}

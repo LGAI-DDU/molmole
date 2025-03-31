@@ -1,1 +1,0 @@
-Nc1nc2ncc(CN(C(=O)C(F)(F)F)c3ccc(C(=O)O)cc3)nc2c(=O)[nH]1

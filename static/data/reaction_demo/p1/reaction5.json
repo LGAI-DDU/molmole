@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [1294, 2044, 125, 38], "category": "txt", "text": "Pd/C/H2"}, {"bbox": [1335, 2126, 47, 31], "category": "txt", "text": "RT"}], "products": [{"bbox": [1407, 1968, 405, 214], "category": "mol", "matching_idx": [0, 9]}], "reactants": [{"bbox": [897, 1984, 410, 215], "category": "mol", "matching_idx": [0, 8]}], "summary": "undefined"}

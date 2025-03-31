@@ -1,0 +1,1 @@
+CC(CC1(O)CCNCC1)C(F)F

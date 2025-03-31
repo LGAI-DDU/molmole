@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [1764, 2021, 132, 33], "category": "txt", "text": "Con.HCl"}, {"bbox": [1789, 2093, 85, 31], "category": "txt", "text": "reflux"}], "products": [{"bbox": [404, 2337, 518, 287], "category": "mol", "matching_idx": [0, 3]}], "reactants": [{"bbox": [1407, 1968, 405, 214], "category": "mol", "matching_idx": [0, 9]}], "summary": "undefined"}

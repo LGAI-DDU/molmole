@@ -1,1 +1,0 @@
-COC1=CC(OC)=C(Cl)C(I)=C1Cl
