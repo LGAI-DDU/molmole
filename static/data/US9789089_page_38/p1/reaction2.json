@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [5744, 1391, 172, 69], "category": "txt", "text":"NBS"}, {"bbox": [5736, 1505, 183, 69], "category": "txt","text":"ACN"}], "products": [{"bbox": [4278, 2045, 1197, 752], "category": "mol", "matching_idx": [0, 2]}], "reactants": [{"bbox": [4431, 1168, 1197, 698], "category": "mol", "matching_idx": [0, 3]}], "summary": "undefined"}

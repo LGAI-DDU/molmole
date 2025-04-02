@@ -1,1 +1,1 @@
-COc1cc(OC)c(Cl)c(N)c1Cl
+CCN1CCN(c2ccc(Nc3ncc4c(n3)CCN(c3c(Cl)c(OC)cc(OC)c3Cl)C4)cc2)CC1

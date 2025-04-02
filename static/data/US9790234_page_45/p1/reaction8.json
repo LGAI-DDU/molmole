@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [1590, 2334, 151, 28], "category": "txt","text":"CrO3, H2SO4"}, {"bbox": [1632, 2390, 66, 28], "category": "txt","text":"step 2"}], "products": [{"bbox": [1785, 2202, 266, 289], "category": "mol", "matching_idx": [0, 5]}], "reactants": [{"bbox": [1324, 2202, 243, 289], "category": "mol", "matching_idx": [0, 9]}], "summary": "undefined"}

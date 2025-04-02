@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [754, 777, 318, 126], "category": "mol", "matching_idx": [0, 2]}, {"bbox": [771, 921, 285, 67], "category": "txt","text":"toluene/NH4OAC/HOAc step4"}], "products": [{"bbox": [396, 1082, 488, 340], "category": "mol", "matching_idx": [0, 8]}], "reactants": [{"bbox": [385, 730, 349, 291], "category": "mol", "matching_idx": [0, 7]}], "summary": "undefined"}

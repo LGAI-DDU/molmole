@@ -1,1 +1,1 @@
-Cc1ccccc1-n1c(CO)cc2cccc(C)c2c1=O
+Cc1cccc(C)c1C(=O)Cl

@@ -1,1 +1,1 @@
-CCN1CCN(c2ccc(NC(=N)N)cc2)CC1
+O=[N+]([O-])c1ccc(F)cc1

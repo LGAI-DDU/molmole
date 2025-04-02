@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [720, 2720, 421, 123], "category": "mol", "matching_idx": [0, 13]}, {"bbox": [897, 2857, 66, 28], "category": "txt","text":"step 9"}], "products": [{"bbox": [1455, 372, 670, 473], "category": "mol", "matching_idx": [0, 4]}], "reactants": [{"bbox": [321, 2632, 385, 307], "category": "mol", "matching_idx": [0, 12]}], "summary": "undefined"}

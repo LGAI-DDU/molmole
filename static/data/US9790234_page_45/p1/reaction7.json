@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [1579, 1274, 196, 28], "category": "txt","text":"Raney Ni, NaOH"}, {"bbox": [1643, 1325, 64, 67], "category": "txt","text":"H2 step 1"}], "products": [{"bbox": [1817, 1135, 243, 291], "category": "mol", "matching_idx": [0, 11]}], "reactants": [{"bbox": [1312, 1135, 243, 291], "category": "mol", "matching_idx": [0, 0]}], "summary": "undefined"}

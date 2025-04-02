@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [788, 521, 169, 25], "category": "txt","text":"Toluene/EtOH"}, {"bbox": [790, 574, 163, 60], "category": "txt","text":"TsOH/120oC. step 2"}], "products": [{"bbox": [385, 730, 349, 291], "category": "mol", "matching_idx": [0, 7]}], "reactants": [{"bbox": [499, 382, 268, 292], "category": "mol", "matching_idx": [0, 6]}], "summary": "undefined"}

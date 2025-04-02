@@ -1,1 +1,1 @@
-OB(O)c1ccccc1O
+COc1c(C)cc(-c2cc(C)cc(Br)c2OCc2ccccc2)cc1C

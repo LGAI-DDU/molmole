@@ -1,1 +1,1 @@
-CCOC(=O)C(=O)Cc1cccc(C)c1C(=O)Nc1ccccc1C
+Cc1ccccc1NC(=O)c1c(C)cccc1C

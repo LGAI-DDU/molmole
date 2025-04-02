@@ -1,1 +1,1 @@
-CC(C)OB(OC(C)C)c1ccc(F)cc1OC1CCCCO1
+Brc1ccccc1SC1CCCCO1

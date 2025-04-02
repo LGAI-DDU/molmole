@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [932, 1279, 101, 23], "category": "txt","text":"MeOH/S"}, {"bbox": [905, 1330, 155, 65], "category": "txt","text":"Et2NH/50oC. step 5"}], "products": [{"bbox": [338, 1479, 483, 316], "category": "mol", "matching_idx": [0, 10]}], "reactants": [{"bbox": [396, 1082, 488, 340], "category": "mol", "matching_idx": [0, 8]}], "summary": "undefined"}

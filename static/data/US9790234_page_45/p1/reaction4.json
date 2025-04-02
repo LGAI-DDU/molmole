@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [838, 2026, 211, 27], "category": "txt","text":"DDQ, 1,4-dioxane"}, {"bbox": [909, 2077, 71, 62], "category": "txt","text":"90oC. step7"}], "products": [{"bbox": [447, 2243, 407, 326], "category": "mol", "matching_idx": [0, 1]}], "reactants": [{"bbox": [408, 1851, 407, 326], "category": "mol", "matching_idx": [0, 3]}], "summary": "undefined"}

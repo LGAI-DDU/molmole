@@ -1,1 +1,1 @@
-CC(CO)CC1(OCOCc2ccccc2)CCN(C(=O)OC(C)(C)C)CC1
+CC(CC1(O)CCN(C(=O)c2ccc(NS(=O)(=O)c3cccc4scnc34)cc2)CC1)C(F)F

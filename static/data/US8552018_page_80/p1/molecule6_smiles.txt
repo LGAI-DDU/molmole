@@ -1,1 +1,1 @@
-COc1cc2c(cc1OCCCN1CCN(C)CC1)C1C(N3CCN(C(=S)Nc4ccc(S(=O)(=O)Nc5ncccn5)cc4)CC3)=NC=NC1N2
+COc1cc2c(cc1OCCCCl)C1C(N3CCN(C(=S)Nc4ccc(S(=O)(=O)Nc5ncccn5)cc4)CC3)=NC=NC1N2

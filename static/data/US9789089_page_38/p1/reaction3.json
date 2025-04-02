@@ -1,0 +1,1 @@
+{"conditions": [{"bbox": [5721, 2317, 225, 74], "category": "txt","text":"CuCN"}, {"bbox": [5583, 2431, 505, 89], "category": "txt","text":"DMF/pyridine"}], "products": [{"bbox": [4163, 3432, 1201, 757], "category": "mol", "matching_idx": [0, 1]}], "reactants": [{"bbox": [4278, 2045, 1197, 752], "category": "mol", "matching_idx": [0, 2]}], "summary": "undefined"}
